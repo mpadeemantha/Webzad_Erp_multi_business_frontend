@@ -679,7 +679,7 @@ export default function EmployeeProfilePage({ params }: { params: Promise<{ id: 
           {/* TAB 1: DOCUMENTS */}
           {activeTab === "DOCS" && (
             <div className="space-y-3">
-              {empDetails.documents.map((doc, idx) => (
+              {empDetails.documents.map((doc: any, idx: number) => (
                 <div key={idx} className="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-200/80">
                   <div className="flex items-center gap-3">
                     <div className="p-2.5 bg-blue-100 text-blue-800 rounded-lg">
@@ -701,7 +701,7 @@ export default function EmployeeProfilePage({ params }: { params: Promise<{ id: 
           {/* TAB 2: LEAVE BALANCES */}
           {activeTab === "LEAVE" && (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {empDetails.leaveBalances.map((lb, idx) => (
+              {empDetails.leaveBalances.map((lb: any, idx: number) => (
                 <div key={idx} className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">{lb.type}</span>
                   <div className="flex justify-between items-baseline">
@@ -730,7 +730,7 @@ export default function EmployeeProfilePage({ params }: { params: Promise<{ id: 
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  {empDetails.attendanceHistory.map((att, idx) => (
+                  {empDetails.attendanceHistory.map((att: any, idx: number) => (
                     <tr key={idx}>
                       <td className="px-4 py-3 font-medium text-slate-800">{att.date}</td>
                       <td className="px-4 py-3 font-mono text-xs">{att.clockIn}</td>
